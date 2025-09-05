@@ -2,6 +2,14 @@
   "name": "todo-app-api-mern-5",
   "version": "1.0.0",
   "description": "my first app",
+  "homepage": "https://github.com/kehan-hansala/todo-app-api-mern#readme",
+  "bugs": {
+    "url": "https://github.com/kehan-hansala/todo-app-api-mern/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kehan-hansala/todo-app-api-mern.git"
+  },
   "license": "ISC",
   "author": "kehan",
   "type": "commonjs",
@@ -22,6 +30,7 @@
     "content-type": "^1.0.5",
     "cookie": "^0.7.2",
     "cookie-signature": "^1.2.2",
+    "cors": "^2.8.5",
     "debug": "^4.4.1",
     "depd": "^2.0.0",
     "dotenv": "^17.2.1",
@@ -107,5 +116,6 @@
     "webidl-conversions": "^7.0.0",
     "whatwg-url": "^14.2.0",
     "wrappy": "^1.0.2"
-  }
+  },
+  "devDependencies": {}
 }

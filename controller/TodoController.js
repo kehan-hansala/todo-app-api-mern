@@ -20,6 +20,18 @@ const createTodo = async (req, resp) => {
         resp.status(500).json({message: 'Internal Server Error', error: e})
     }
 }
+ const findAllTodos = async (req, resp) => {
+     try {
+         const selectedUser = await User.findOne({email:req.userEmail});
+         if(!selectedUser){
+             return resp.status(404).json({message:'user not found'});
+         }
+         const todos = await Todo.find();
+         resp.status(201).json({todos});
+     } catch (e) {
+         resp.status(500).json({message: 'Internal Server Error', error: e})
+     }
+ }
 const findAllPendingTodos = async (req, resp) => {
     try {
         const selectedUser = await User.findOne({email:req.userEmail});
@@ -126,5 +138,6 @@ module.exports = {
     findTodoById,
     updateTodoStatus,
     deleteTodoById,
-    updateTodoContent
+    updateTodoContent,
+    findAllTodos
 }
